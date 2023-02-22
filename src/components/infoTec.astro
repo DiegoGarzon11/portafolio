@@ -1,0 +1,32 @@
+---
+interface Props {
+	especialidad: string;
+	frase1: string;
+	frase2: string;
+	frase3: string;
+}
+const { especialidad, frase1, frase2, frase3 } = Astro.props;
+---
+
+<div class='flex items-center justify-center text-white rounded-xl p-5'>
+	<div
+		class='bg-neutral-900 p-5 rounded-lg shadow-black shadow-md w-full h-auto container_especialidad'>
+		<div class='flex items-center justify-center text-2xl text-center'>
+			<h3 class='mb-5 text-zinc-400'>{especialidad}</h3>
+		</div>
+		<div class='px-5'>
+			<ol class='list-disc space-y-2 p-2'>
+				<li>{frase1}</li>
+				<li>{frase2}</li>
+				<li>{frase3}</li>
+			</ol>
+		</div>
+	</div>
+</div>
+<style>
+	@media (max-width: 700px) {
+		.container_especialidad {
+			width: 100%;
+		}
+	}
+</style>

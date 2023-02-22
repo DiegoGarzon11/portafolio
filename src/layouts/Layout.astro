@@ -1,35 +1,27 @@
 ---
-export interface Props {
+interface Props {
 	title: string;
 }
-
 const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<meta charset='UTF-8' />
+		<meta name='viewport' content='width=device-width' />
+		<link rel='icon' href='/assets/favicon.svg' />
+		<meta name='generator' content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class='bg-zinc-900'>
 		<slot />
 	</body>
+	<style>
+		html {
+			scroll-behavior: smooth;
+			font-size: 1.125rem /* 18px */;
+			line-height: 1.75rem /* 28px */;
+		}
+	</style>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>

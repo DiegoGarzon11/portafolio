@@ -1,0 +1,221 @@
+---
+import Footer from '../components/footer.astro';
+import Header from '../components/header.astro';
+import Layout from '../layouts/Layout.astro';
+
+import { fecha } from '../components/footer.astro';
+import Skills from '../components/skills.astro';
+import Experience from '../components/experience.astro';
+---
+
+<Layout title='Diego Garzón | about'>
+	<Header />
+	<nav class='text-white flex w-full justify-around'>
+		<div class='text-center'>
+			<p class='text-zinc-600'>Born In</p>
+			<p>Colombia</p>
+		</div>
+		<div class='text-center'>
+			<p class='text-zinc-600'>Experience</p>
+			<p>+{fecha - 2022} Year</p>
+		</div>
+		<div class='text-center'>
+			<p class='text-zinc-600'>Date Of Birth</p>
+			<p>19 Januany 2002</p>
+		</div>
+	</nav>
+	<div class='flex w-2/4 justify-end container_name'>
+		<h1
+			class='name_page text-7xl line-through decoration-slate-50 text-white font-serif decoration-2 py-8'>
+			About Me
+		</h1>
+	</div>
+
+	<div class='container px-10 text-center grid grid-cols-2 text-white main-container'>
+		<div class='flex gap-5 flex-col border-r-2 pr-8 linea_intermedia justify-center'>
+			<section class='flex flex-col items-end text-center'>
+				<img class='w-10' src='../assets/happy.svg' alt='' />
+				<p>Happiness</p>
+			</section>
+			<section class='flex flex-col items-end text-center'>
+				<img class='w-10' src='../assets/discipline.svg' alt='' /><p>Discipline</p>
+			</section>
+			<section class='flex flex-col items-end text-center'>
+				<img class='w-10' src='../assets/determination.svg' alt='' /><p>Determination</p>
+			</section>
+		</div>
+		<div class='text-start pl-8 description-text-skills'>
+			<p class='text-white'>
+				My name is Diego Garzón, I am {fecha - 2002} years old, I am from Bogotá, Colombia,
+				I have been studying development since October 2021 and I have been working as a developer
+				since August 2022.
+				<br />
+				<br />
+
+				I am a person who likes challenges, a person who likes adventures, and never give
+				up, I like to improve myself in every aspect, and always try to be better than
+				before
+				<br />
+				<br />
+
+				I usually do different things, and avoid spending my time not doing something or
+				being bored, that's why among the things I do in my day to day is for fun, playing
+				sports, reading books, listening to music, playing video games, watching movies,
+				playing soccer , spend time with my family and friends. I really like animals,
+				music, especially electronic music, and pop in English, and of course I like many
+				other things...
+				<br />
+				<br />
+				I like to develop amazing projects that have a good design, and also have a pretty cool
+				logic, development is one of my passions, which is why I enjoy doing what I do, I like
+				to be constantly learning, learning new technologies is something what do I like to
+				do.
+			</p>
+			<a class='w-auto' href='#experience'>
+				<button
+					class='hover:bg-zinc-800 hover:border-white my-8 border py-2 px-5 border-green-900'>
+					Work Experience
+				</button>
+			</a>
+		</div>
+	</div>
+	<div class='flex w-2/4 justify-end container_name'>
+		<h1
+			class='name_page text-7xl line-through decoration-slate-50 text-white font-serif decoration-2 py-8'>
+			My Resume
+		</h1>
+	</div>
+	<div class='container px-10 text-center grid grid-cols-2 text-white main-container'>
+		<div class='flex gap-5 flex-col border-r-2 pr-8 linea_intermedia justify-center my-8'>
+			<section class='flex flex-col items-end text-center'>
+				<img class='w-10' src='../assets/creatividad.svg' alt='' /><p>Creativity</p>
+			</section>
+			<section class='flex flex-col items-end text-center'>
+				<img class='w-10' src='../assets/soñar.svg' alt='' /><p>Dream</p>
+			</section>
+			<section class='flex flex-col items-end text-center'>
+				<img class='w-10' src='../assets/enjoy.svg' alt='' /><p>Enjoying</p>
+			</section>
+		</div>
+		<div class='pl-8 description-text-skills'>
+			<p class='text-white text-start'>
+				Self-taught fullStack web developer with +1 years of experience and knowledge in
+				the most used technologies in the industry I am able to solve the problems that I
+				encounter, and investigate in depth, I like to be updated, learn different
+				technologies, that help me expand in this amazing world of development<br />
+				<br />
+				<hr />
+				<br />
+				<h3 class='flex self-start text-4xl font-semibold'>SOFT SKILLS</h3>
+				<ol class='text-start list-disc my-5 pl-8'>
+					<li>Self-learning</li>
+					<li>Skill to develop</li>
+					<li>logical thoughts and reasoning</li>
+					<li>Good communication and listening</li>
+					<li>Good predisposition to work in a team</li>
+					<li>Imagination, creativity, and taste for visual aesthetics</li>
+					<li>Professionalism and responsibility</li>
+					<li>Creation of websites</li>
+				</ol>
+				<h3 class='flex self-start text-4xl font-semibold'>SKILLS</h3>
+			</p>
+			<h5 class='my-5 text-2xl'>FrontEnd</h5>
+			<div class='flex flex-col justify-start items-start gap-3 p-5 container_skills'>
+				<Skills nameSkill='Html' color='🟢' valor={0.9} />
+				<Skills nameSkill='Css' color='🟣' valor={0.8} />
+				<Skills nameSkill='Tailwind' color='🟤' valor={0.9} />
+				<Skills nameSkill='Bootstrap' color='🟣' valor={0.6} />
+				<Skills nameSkill='JavaScript' color='🟡' valor={0.9} />
+				<Skills nameSkill='TypeScript' color='🔵' valor={0.7} />
+				<Skills nameSkill='Astro' color='🟠' valor={0.7} />
+				<Skills nameSkill='ReactJs' color='🔵' valor={0.8} />
+				<Skills nameSkill='Angular' color='🔴' valor={0.7} />
+			</div>
+			<h5 class='my-5 text-2xl'>BackEnd</h5>
+			<div class='flex flex-col justify-start items-start gap-3 p-5 container_skills'>
+				<Skills nameSkill='NodeJs' color='🟢' valor={0.7} />
+				<Skills nameSkill='Express' color='🟤' valor={0.9} />
+				<Skills nameSkill='C#' color='🟣' valor={0.5} />
+				<Skills nameSkill='MySQL' color='🔵' valor={0.7} />
+				<Skills nameSkill='Sequelize' color='🟡' valor={0.6} />
+				<Skills nameSkill='JWT' color='🟠' valor={0.7} />
+			</div>
+		</div>
+	</div>
+	<div class='grid grid-cols-2 text-white gap-10 p-12 experiences'>
+		<Experience
+			titulo='WORK EXPERIENCE Quickcomm'
+			fecha='Peru (August 2022—nowadays)'
+			descripcion="I am the person who is in charge of the new version of the company website. Consuming the company's API to later use this data, when needed, and display it in the different components In addition to this, the page must be very user-friendly (ux - ui) that's why everything is built with material ui and tailwind for a more user-friendly interface"
+		/>
+		<Experience
+			titulo='PROFESSIONAL EXPERIENCE'
+			fecha='Digital house project (2021-2022)'
+			descripcion='worked on e-commerce web page in frontend and backend optimizing and improving the user experience using everything technologies in my professional summary this was in a team of 4 developers.'
+		/>
+		<div class='w-full flex justify-center'>
+			<a
+				class='w-auto'
+				href='./assets/Cv Diego-Garzon.pdf'
+				download='Cv Diego-Garzon'
+				target='_blank'>
+				<button
+					class='hover:bg-zinc-800 hover:border-white my-8 border py-2 px-5 border-green-900'>
+					Download CV
+				</button>
+			</a>
+		</div>
+	</div>
+
+	<Footer />
+</Layout>
+<style>
+	@media (max-width: 700px) {
+		.main-container {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+		.container_name {
+			width: 100%;
+		}
+		.name_page {
+			width: 100%;
+			text-align: center;
+			font-size: 3rem;
+		}
+		.description-text-skills {
+			padding: 0;
+		}
+		.linea_intermedia {
+			display: flex;
+			width: 100%;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			border: 0;
+			padding: 0;
+		}
+		.linea_intermedia > section {
+			align-items: center;
+		}
+		.name_page {
+			width: 100%;
+			text-align: center;
+			font-size: 3rem;
+		}
+
+		.container_skills {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.experiences {
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+	}
+	.linea_intermedia {
+		border-right: #ea7987 2px solid;
+	}
+</style>

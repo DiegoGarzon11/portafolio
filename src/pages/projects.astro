@@ -1,0 +1,101 @@
+---
+import Header from '../components/header.astro';
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/footer.astro';
+import Project from '../components/project.astro';
+---
+
+<Layout title='Diego Garzón | projects'>
+	<Header />
+	<div class='flex w-2/4 justify-end container_name'>
+		<h1
+			class='name_page text-7xl line-through decoration-slate-50 text-white font-serif decoration-2 py-8 name-page'>
+			My Projects
+		</h1>
+	</div>
+	<div class='text-white flex justify-center'>
+		<div class='w-2/4 info-container'>
+			<p>
+				This is a collection of my main projects, which are in continuous improvement, I
+				feel proud to be able to share them
+			</p>
+			<br />
+			<p class='text-zinc-600'>
+				These projects were all built with the technologies I use, if you want to know
+				something more in depth, you can check my <a
+					href='https://github.com/DiegoGarzon11'
+					target='_blank'
+					class='text-green-900'>
+					GitHub</a
+				>
+
+				or better <a href='#contact' class='text-green-900'>contact me</a> ;)
+			</p>
+		</div>
+	</div>
+
+	<section class='flex items-center w-full my-8 flex-col gap-20'>
+		<Project
+			projectDate={2023}
+			nameProject='TASK'
+			image='/img/tasks.png'
+			deploy='https://taskmanager-lac.vercel.app/'
+			code='https://github.com/DiegoGarzon11/ReactDev-Challenges-ALevel'
+		/>
+		<Project
+			projectDate={2023}
+			nameProject='Juego'
+			image='../img/juego.png'
+			deploy='https://github.com/DiegoGarzon11/pidraPapelTijera'
+			code='https://jueguitodiego.netlify.app/'
+		/>
+		<Project
+			projectDate={2022}
+			nameProject='DEEZER'
+			image='../img/deezer.png'
+			deploy='https://copy-deezer.vercel.app/'
+			code='https://github.com/DiegoGarzon11/copy-deezer'
+		/>
+		<Project
+			projectDate={2022}
+			nameProject='KeyPet'
+			image='/img/keypet.png'
+			deploy='https://keypet.vercel.app/'
+			code='https://github.com/DiegoGarzon11/keypet'
+		/>
+	</section>
+	<Footer />
+</Layout>
+
+<style>
+	@media (max-width: 700px) {
+		.container_name {
+			width: 100%;
+		}
+		.name_page {
+			width: 100%;
+			text-align: center;
+			font-size: 3rem;
+		}
+		.info-container {
+			width: 85%;
+			font-size: 1.1rem;
+			padding: 0;
+		}
+		.info-projects {
+			display: grid;
+			grid-template-columns: 1fr;
+			width: 85%;
+		}
+		.btn-projects {
+			display: flex;
+			justify-content: center;
+		}
+		.container-info-project {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+</style>

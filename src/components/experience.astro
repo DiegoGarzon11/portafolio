@@ -1,0 +1,26 @@
+---
+interface Props {
+	titulo: string;
+	fecha: string;
+	descripcion: string;
+}
+const { titulo, fecha, descripcion } = Astro.props;
+---
+
+<section class='flex flex-col'>
+	<div class='grid grid-rows-2'>
+		<p>{titulo}</p>
+		<p class='text-zinc-600'>{fecha}</p>
+	</div>
+	<p>
+		{descripcion}
+	</p>
+</section>
+<style>
+	@media (max-width: 700px) {
+		.experiences {
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

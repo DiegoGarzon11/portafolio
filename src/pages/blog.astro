@@ -1,0 +1,50 @@
+---
+import Header from '../components/header.astro';
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/footer.astro';
+import InfoTec from '../components/infoTec.astro';
+const nameEspacialidadFull = [
+	'Maintenance and error resolution',
+	'Different layers of validations for greater web security',
+	'Management of asynchronous connections with Ajax and/or fetch.',
+];
+---
+
+<Layout title='Diego Garzón | projects'>
+	<Header />
+	<div class='flex justify-center py-5'>
+		<p class='text-white w-3/5'>
+			I am a web developer, responsible for designing, creating, and maintaining websites. I
+			utilize a variety of programming languages and technologies to bring websites to life,
+			making them interactive and user-friendly.
+			<br />
+			<br /> It is essential for me to stay up-to-date with the latest industry trends and technologies,
+			as well as having a strong sense of design and problem-solving skills. I work closely with
+			clients, designers, and other stakeholders to ensure the websites I build meet their needs
+			and exceed their expectations. Whether it's a simple website or a complex web application,
+			I play a crucial role in shaping the digital landscape.
+		</p>
+	</div>
+	<div class='p-8 flex gap-12'>
+		<InfoTec
+			especialidad='FullStack'
+			frase1='Maintenance and error resolution'
+			frase2='Different layers of validations for greater web security'
+			frase3='Management of asynchronous connections with Ajax and/or fetch.'
+		/>
+		<InfoTec
+			especialidad='FrontEnd'
+			frase1='Implement good practices in development (responsive, UX-UI).'
+			frase2='Management of user interactions and interface animations<'
+			frase3='creativity to make attractive and comfortable interfaces when this are using'
+		/>
+		<InfoTec
+			especialidad='BackEnd'
+			frase1='Planning and estimation of the development of the Web server'
+			frase2='Use of Session and Cookies to store information.'
+			frase3='Analysis, design and implementation of a database system'
+		/>
+	</div>
+
+	<Footer />
+</Layout>

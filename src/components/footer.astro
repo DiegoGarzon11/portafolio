@@ -1,0 +1,184 @@
+---
+export const fecha = new Date().getFullYear();
+---
+
+<div class='text-white bg-neutral-900 w-full grid grid-cols-2 p-12 container_footer'>
+	<div class='grid grid-cols-1 w-full p-10 gap-6 div_second'>
+		<section class='w-full flex justify-around items-center fist_section'>
+			<a href='/'>
+				<h2 class='content-start text-4xl diego'>
+					<span class='mr-1 text-rose-400 font-bold'>D</span> G
+				</h2>
+			</a>
+			<ol class='flex gap-10 git-link'>
+				<li
+					class='hover:bg-zinc-800 px-5 border rounded-3xl border-none flex flex-col items-center text-center cursor-pointer'>
+					<a
+						href='https://github.com/DiegoGarzon11'
+						class='flex flex-col items-center'
+						target='_blank'><img src='../assets/github.svg' alt='' />GitHub</a
+					>
+				</li>
+				<li
+					class='hover:bg-zinc-800 px-5 border rounded-3xl border-none flex flex-col items-center cursor-pointer'>
+					<a href='https://www.linkedin.com/in/diego-garzon-b20771204/' target='_blank'
+						><img src='../assets/linkeind.svg' alt='' /></a
+					>LinkedIn
+				</li>
+			</ol>
+		</section>
+		<hr />
+		<section class='grid grid-cols-2 second_section'>
+			<div class='flex flex-col gap-3'>
+				<p><span class='font-bold'>Name :</span> Diego Garzón</p>
+				<p><span class='font-bold'>Age :</span> {fecha - 2002}</p>
+				<p><span class='font-bold'>Nationality :</span> Colombia</p>
+				<br />
+				<ol class='flex gap-10 text-xl'>
+					<li><a class='font-bold' href='/about'>About Me</a></li>
+				</ol>
+			</div>
+			<div class='flex flex-col gap-3'>
+				<div class='flex items-center'>
+					<p>Phone Numbre</p>
+					<ol class='flex gap-10'>
+						<li
+							class='hover:bg-zinc-800 px-5 border rounded-3xl border-none text-center cursor-pointer'>
+							<a href='https://wa.link/pffwmm' target='_blank'
+								><img src='../assets/mobile.svg' alt='' /></a
+							> phone
+						</li>
+					</ol>
+				</div>
+				<p>Portfolio / <span class='font-bold'><a href='/blog'>Blog</a></span></p>
+				<button
+					type='submit'
+					class='border border-white px-5 py-2 text-center cursor-default'
+					id='ir_form'>
+					INQUIRE &RightArrow;</button
+				>
+			</div>
+		</section>
+		<hr />
+		<section>
+			<ol class='flex justify-center items-center'>
+				<a id='contacto'></a>
+
+				<li
+					class='hover:bg-zinc-800 px-5 border rounded-3xl border-none flex flex-col items-center cursor-pointer'>
+					<a href='mailto:diegogarzon357@gmail.com' target='_blank'
+						><img src='../assets/email.svg' alt='' /></a
+					>Email
+				</li>
+
+				<li
+					class='hover:bg-zinc-800 px-5 border rounded-3xl border-none flex flex-col items-center cursor-pointer'>
+					<a href='https://www.instagram.com/diegog_11_/' target='_blank'
+						><img src='../assets/instagram.svg' alt='' /></a
+					> Instagram
+				</li>
+				<li
+					class='hover:bg-zinc-800 px-5 border rounded-3xl border-none flex flex-col items-center cursor-pointer'>
+					<a href='https://twitter.com/diegog_11_' target='_blank'
+						><img src='../assets/twitter.svg' alt='' /></a
+					> Twitter
+				</li>
+			</ol>
+		</section>
+	</div>
+	<form class='border border-white p-10 flex flex-col gap-4 form'>
+		<h4 class='text-3xl text-zinc-400'>Inquire</h4>
+		<br />
+		<div class='w-full flex gap-5'>
+			<input
+				class='w-full px-2 py-2 bg-neutral-800'
+				type='text'
+				placeholder='👤 Fist Name'
+				required
+			/>
+
+			<input
+				class='w-full px-2 py-2 bg-neutral-800'
+				type='text'
+				placeholder='👤 Last Name'
+				required
+			/>
+		</div>
+		<div class='w-full'>
+			<input
+				class='w-full px-2 py-2 bg-neutral-800'
+				type='email'
+				placeholder='✉️ Email Address'
+				required
+			/>
+		</div>
+		<div class='w-full'>
+			<input
+				class='w-full px-2 py-2 bg-neutral-800'
+				type='tel'
+				placeholder='📞Phone Number'
+				required
+			/>
+		</div>
+		<div class='w-full'>
+			<textarea
+				class='w-full px-2 py-2 bg-neutral-800'
+				placeholder='📄Let me know how i can help you'
+				required></textarea>
+		</div>
+		<button class='flex self-start border border-white py-2 px-5 hover:bg-zinc-800'>
+			Submit &RightArrow;
+		</button>
+	</form>
+</div>
+<div class='w-full py-5 text-center text-white bg-neutral-900'>
+	<p>&copy; Hecho por Diego Garzón. {fecha}</p>
+</div>
+<style>
+	@media (max-width: 700px) {
+		.container_footer {
+			display: flex;
+			flex-direction: column;
+			padding: 25px;
+		}
+		.div_second {
+			padding: 0;
+		}
+		#ir_form {
+			display: none;
+		}
+		.git-link {
+			gap: 0;
+		}
+		.fist_section {
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			gap: 3px;
+		}
+		.diego {
+			font-size: 2rem;
+		}
+		.second_section {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+		form {
+			margin-top: 20px;
+			padding: 15px !important;
+		}
+		form > input {
+			font-size: 1px !important;
+		}
+	}
+	.diego:hover {
+		cursor: pointer;
+		transform: scale(1.2);
+	}
+	.diego {
+		transition: transform ease 0.3s;
+	}
+	.boton1:active + .boton2 {
+		background-color: blue;
+	}
+</style>

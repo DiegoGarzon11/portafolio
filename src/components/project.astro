@@ -1,0 +1,67 @@
+---
+interface Props {
+	projectDate: number;
+	image: string;
+	nameProject: any;
+	deploy: string;
+	code: string;
+}
+const { projectDate, image, nameProject, deploy, code } = Astro.props;
+---
+
+<article
+	class='flex flex-row text-white info-projects justify-center p-8 items-end border border-rose-400 border-opacity-10 rounded-md'>
+	<div class='flex flex-col items-center'>
+		<img class='w-96 img shadow-black shadow-md rounded-md' src={image} alt='image' />
+		<p class='text-end font-bold mt-5 text-lg self-end'>{projectDate}</p>
+	</div>
+	<div class='container-info-project'>
+		<div>
+			<p class='text-3xl'>{nameProject}</p>
+			<br />
+			<br />
+			<p class='text-sm'>UX UI DESING</p>
+			<p class='text-sm'>DEVELOPMENT</p>
+			<br />
+			<br />
+		</div>
+		<div class='flex gap-8 btn-projects'>
+			<button class='border border-rose-400 px-5 py-1 rounded-lg hover:bg-zinc-800'>
+				<a href={deploy} target='_blank'>Deploy</a>
+			</button><button class='border border-rose-400 px-5 py-1 rounded-lg hover:bg-zinc-800'
+				><a href={code} target='_blank'>Code</a></button
+			>
+		</div>
+	</div>
+</article>
+<style>
+	.info-projects {
+		display: flex;
+		gap: 50px;
+	}
+	.container-info-project {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	@media (max-width: 700px) {
+		.info-projects {
+			display: grid;
+			grid-template-columns: 1fr;
+			width: 85%;
+		}
+		.btn-projects {
+			display: flex;
+			justify-content: center;
+		}
+		.container-info-project {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+		}
+		.img {
+			width: 100%;
+		}
+	}
+</style>

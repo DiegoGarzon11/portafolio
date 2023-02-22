@@ -1,0 +1,65 @@
+---
+function GetRounds(roundFill: string, roundEmpty: string, porcent: number): string {
+	const numOfSymbols = 10;
+	const fill = Math.round(porcent * numOfSymbols);
+	const empty = numOfSymbols - fill;
+	return roundFill.repeat(fill) + roundEmpty.repeat(empty);
+}
+const skillsFront = [
+	'Html',
+	'Css',
+	'Tailwind',
+	'Bootstrap',
+	'JavaScript',
+	'TypeScript',
+	'Astro',
+	'ReactJs',
+	'Angular',
+	'NodeJs',
+	'Express',
+	'C#',
+	'MySQL',
+	'Sequelize',
+	'JWT',
+];
+interface Props {
+	nameSkill: string;
+	valor: number;
+	color: string;
+}
+const { nameSkill, valor, color } = Astro.props;
+const porcentaje = valor * 100;
+---
+
+<div>
+	{
+		skillsFront.map((tec) =>
+			tec === nameSkill ? (
+				<div class='grid grid-cols-3 tecno shadow-black shadow-sm rounded-3xl p-5 items-center bg-neutral-900'>
+					<div class=' text-start'>
+						<span class=' text-start font-bold '>{nameSkill}</span>
+					</div>
+					<div class='flex items-center justify-center'>
+						<span class=''>{GetRounds(color, '⚪', valor)}</span>
+					</div>
+					<div class='flex items-center justify-end'>
+						<p class=' b p-1'>{porcentaje} %</p>
+					</div>
+				</div>
+			) : (
+				''
+			)
+		)
+	}
+</div>
+<style>
+	@media (max-width: 700px) {
+		.tecno {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+			justify-content: center;
+		}
+	}
+</style>

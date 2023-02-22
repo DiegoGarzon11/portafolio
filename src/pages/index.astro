@@ -1,81 +1,86 @@
 ---
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+
+function Frase(frase: String) {
+	let acum = '';
+	for (let i = 0; i < frase.length; i++) {
+		acum += frase[i];
+	}
+	return acum.split('');
+}
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<Layout title='Diego Garzón | web developer'>
+	<Header />
+	<div class='text-white'>
+		<div class='creatividad absolute text-center text-2xl font-semibold leading-10 left-4'>
+			<div class='flex flex-col frases'>
+				{Frase('CREATIVITY').map((e) => <p class='text-rose-400'>{e}</p>)}
+			</div>
+		</div>
+		<div class='flex justify-around w-full my-10 main_container'>
+			<div
+				class='creatividad absolute text-center text-2xl font-semibold leading-10 right-1/3'>
+				<div class='flex flex-col frases'>
+					{Frase('INTUITION').map((e) => <p class='text-rose-400'>{e}</p>)}
+				</div>
+			</div>
+			<!-- <img class='astronauta absolute -z-10 left-36' src='../img/astro.png' alt='' /> -->
+			<p
+				class='text-white w-2/5 text-center self-center border-800 p-9 contenedor_frase leading-8 text-lg bg-neutral-900 shadow-black shadow-md'>
+				Hello, welcome to my portfolio, I want you to know me a little more, that you know
+				what I do and how I do it. You will know my skills, hobbies. I hope you enjoy the
+				experience, and do not hesitate to contact me if you want to know something more
+				specific. We are going to work together and let our creativity fly, and carry out
+				all our ideas.
+			</p>
 
+			<div class='h-auto flex items-center justify-center'>
+				<img
+					class='shadow-xl shadow-black fotoMia bgr'
+					src='../img/fotoMia.png'
+					alt=''
+					width='300'
+				/>
+			</div>
+			<div
+				class='creatividad absolute text-center text-2xl font-semibold leading-10 right-3'>
+				<div class='flex flex-col frases'>
+					{Frase('INSPIRATION').map((e) => <p class='text-rose-400'>{e}</p>)}
+				</div>
+			</div>
+		</div>
+	</div>
+	<Footer />
+</Layout>
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+	@media (max-width: 700px) {
+		.astronauta,
+		.frases {
+			display: none;
+		}
+		.main_container {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+		.contenedor_frase {
+			width: 90%;
+		}
+		.fotoMia {
+			width: 250px;
+			height: 350px;
+		}
 	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
+
+	.creatividad {
+		color: #274a2e58;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+	.astronauta {
+		top: 25%;
+		left: 20%;
+		filter: drop-shadow(5px 10px 3px black);
 	}
 </style>
