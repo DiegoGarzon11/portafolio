@@ -2,6 +2,7 @@
 import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
 import Layout from '../layouts/Layout.astro';
+import Chat from '../components/svelte/Chat.svelte';
 
 function Frase(frase: String) {
 	let acum = '';
@@ -53,6 +54,7 @@ function Frase(frase: String) {
 			</div>
 		</div>
 	</div>
+	<Chat />
 	<Footer />
 </Layout>
 <style>
