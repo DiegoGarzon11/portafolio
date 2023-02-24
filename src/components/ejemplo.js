@@ -51,16 +51,29 @@ window.addEventListener('load', () => {
 			mensaje.includes('habilidades') ||
 			mensaje.includes('conocimientos')
 		) {
-			textoChat.innerText = `Sure, the answer to your question: ${inputChat.value} \n \n Some of Diego' skills are javascript, typescript, angular, react, css, tailwind, astro, nodejs, express, jwt, mysql, APIs, c#, git/github, sequelize`;
+			textoChat.innerText = `Sure, the answer to your question: ${inputChat.value} \n \n Some of Diego' skills are javascript, typescript, angular, react, css, tailwind, astro, nodejs, express, jwt, mysql, APIs, c#, git/github, sequelize.
+			Besides that he knows english`;
 		} else if (
 			mensaje.includes('vive') ||
 			mensaje.includes('de donde es ') ||
 			mensaje.includes('nacio')
 		) {
 			textoChat.innerText = `Sure, the answer to your question: ${inputChat.value} \n \n  Diego was born and raised in Chia, Colombia, since then he has been living there`;
+		} else if (
+			mensaje.includes('haces') ||
+			mensaje.includes('what are you doing?') ||
+			mensaje.includes('que haces')
+		) {
+			textoChat.innerText = `Sure, the answer to your question: ${inputChat.value} \n \n  i'm here for help you`;
+		} else if (
+			mensaje.includes('dedica diego') ||
+			mensaje.includes('What does Diego ?') ||
+			mensaje.includes('que hace diego')
+		) {
+			textoChat.innerText = `Sure, the answer to your question: ${inputChat.value} \n \n  Diego is web developer fullstack, He is a self-taught student and studies French as well. He is improving constantly his skills and is a person who likes practice several sports`;
 		} else {
 			textoChat.innerText =
-				"Sorry, I don't have the answer right now, i hope help you as soon as posible :) ";
+				"Sorry, I don't have the answer right now, i hope help you as soon as possible :) ";
 		}
 		btnEnviar.disabled = true;
 	}
