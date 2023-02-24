@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
 		nombreUser = localStorage.getItem('user_name');
 
 		if (mensajesUser.length <= 1) {
-			textoChat.innerText = `Un gusto conocerte ${nombreUser}`;
+			textoChat.innerText = `Nice to meet you ${nombreUser}`;
 		} else if (
 			mensaje.includes('thank') ||
 			mensaje.includes('gracias') ||
