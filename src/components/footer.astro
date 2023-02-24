@@ -1,5 +1,6 @@
 ---
 export const fecha = new Date().getFullYear();
+import Chat from './Chat.astro';
 ---
 
 <div class='text-white bg-neutral-900 w-full grid grid-cols-2 p-12 container_footer'>
@@ -55,7 +56,7 @@ export const fecha = new Date().getFullYear();
 					type='submit'
 					class='border border-white px-5 py-2 text-center cursor-default'
 					id='ir_form'>
-					INQUIRE &RightArrow;</button
+					Talk with me &RightArrow;</button
 				>
 			</div>
 		</section>
@@ -86,53 +87,11 @@ export const fecha = new Date().getFullYear();
 			</ol>
 		</section>
 	</div>
-	<form class='border border-white p-10 flex flex-col gap-4 form'>
-		<h4 class='text-3xl text-zinc-400'>Inquire</h4>
-		<br />
-		<div class='w-full flex gap-5'>
-			<input
-				class='w-full px-2 py-2 bg-neutral-800'
-				type='text'
-				placeholder='👤 Fist Name'
-				required
-			/>
 
-			<input
-				class='w-full px-2 py-2 bg-neutral-800'
-				type='text'
-				placeholder='👤 Last Name'
-				required
-			/>
-		</div>
-		<div class='w-full'>
-			<input
-				class='w-full px-2 py-2 bg-neutral-800'
-				type='email'
-				placeholder='✉️ Email Address'
-				required
-			/>
-		</div>
-		<div class='w-full'>
-			<input
-				class='w-full px-2 py-2 bg-neutral-800'
-				type='tel'
-				placeholder='📞Phone Number'
-				required
-			/>
-		</div>
-		<div class='w-full'>
-			<textarea
-				class='w-full px-2 py-2 bg-neutral-800'
-				placeholder='📄Let me know how i can help you'
-				required></textarea>
-		</div>
-		<button class='flex self-start border border-white py-2 px-5 hover:bg-zinc-800'>
-			Submit &RightArrow;
-		</button>
-	</form>
+	<Chat />
 </div>
 <div class='w-full py-5 text-center text-white bg-neutral-900'>
-	<p>&copy; Hecho por Diego Garzón. {fecha}</p>
+	<p>&copy; Made by Diego Garzón. {fecha}</p>
 </div>
 <style>
 	@media (max-width: 700px) {
