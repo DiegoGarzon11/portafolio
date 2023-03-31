@@ -1,70 +1,22 @@
-<header class='h-full'>
-	<div class='relative brightness-50 -z-30'>
-		<img class='foto w-full' src=' /img/arbol.png' alt='' />
-	</div>
-	<div class='absolute top-0 w-full'>
-		<div
-			class='text-white flex fixed justify-evenly items-center w-full bg-neutral-900 z-10 container-redes'>
-			<a href='/'>
-				<h2 class='content-start text-2xl diego'>
-					<span class='mr-1 text-rose-400 font-bold'>D</span> G
-				</h2>
-			</a>
-
-			<ol class='flex gap-10 text-xl justify-center redes'>
-				<li><a class='descrip relative' href='/'>Home</a></li>
-				<li><a class='descrip relative' href='/blog'>blog</a></li>
-				<li><a class='descrip relative' href='/about'>About</a></li>
-				<li><a class='descrip relative' href='/projects'>Projects</a></li>
-				<li><a class='descrip relative' href='#contacto'>Contacto</a></li>
-			</ol>
-		</div>
-		<div
-			class='text-white flex items-center justify-center flex-col my-12 text-center h-full w-full'>
-			<div class='flex justify-around w-full gap-14 items-center container_foto h-full'>
-				<div class='flex flex-col items-center justify-center w-2/6 second_container'>
-					<img class='fotoMia mt-10' src='/img/perfil.png' alt='' />
-					<div class=''>
-						<p class='name text-3xl'>Diego Garzón</p>
-						<h1 class='name text-zinc-400'>Web Developer FullStack</h1>
-					</div>
-				</div>
-				<div class='flex flex-col justify-evenly gap-14'>
-					<p class='text-2xl uppercase w-2/4 frase text-zinc-400'>
-						develop our thoughts and ideas
-					</p>
-					<div class='flex'>
-						<a href='#chat'>
-							<button
-								class='bg-neutral-800 rounded-md px-3 border border-white hover:bg-zinc-900'>
-								Ask me something!
-							</button>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
+<header class='w-full h-14 relative'>
+	<div class='text-white flex justify-evenly mb-60 fixed items-center w-full bg-neutral-900 z-10 py-3'>
+		<a href='/'>
+			<h2 class='text-2xl diego'>
+				<span class='mr-1 text-rose-400 font-bold'>D</span> G
+			</h2>
+		</a>
+		<ol class='flex gap-10 text-xl'>
+			<li><a class='descrip relative' href='/'>Home</a></li>
+			<li><a class='descrip relative' href='/blog'>blog</a></li>
+			<li><a class='descrip relative' href='/about'>About</a></li>
+			<li><a class='descrip relative' href='/projects'>Projects</a></li>
+			<li><a class='descrip relative' href='#contacto'>Contacto</a></li>
+		</ol>
 	</div>
 </header>
 
 <style>
 	@media (max-width: 700px) {
-		.diego {
-			display: none;
-		}
-		.container-redes {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		.redes {
-			font-size: 1rem;
-			gap: 15px;
-		}
-		.container_foto {
-			display: grid;
-			place-items: center;
-		}
 		.second_container {
 			width: 100%;
 		}
@@ -75,20 +27,9 @@
 	}
 	.frase {
 		background-size: cover;
-
 		-moz-background-clip: text;
 		-webkit-background-clip: text;
 		text-transform: uppercase;
-	}
-	.fotoMia {
-		border-radius: 50%;
-		width: 200px;
-		height: 200px;
-		box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.553);
-	}
-	.foto {
-		height: 50vh;
-		filter: blur(1.3px);
 	}
 	.frase {
 		overflow: hidden;

@@ -4,13 +4,13 @@ interface Props {
 	fecha: string;
 	descripcion: string;
 }
-const { titulo, fecha, descripcion } = Astro.props;
+const {titulo, fecha, descripcion} = Astro.props;
 ---
 
 <section class='flex flex-col'>
 	<div class='grid grid-rows-2'>
 		<p>{titulo}</p>
-		<p class='text-zinc-600'>{fecha}</p>
+		<p class='opacity-40'>{fecha}</p>
 	</div>
 	<p>
 		{descripcion}
