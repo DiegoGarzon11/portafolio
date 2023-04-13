@@ -9,7 +9,7 @@ import Chat from '../components/Chat.astro';
 	<Header />
 
 	<div class='flex justify-around my-10 main_container text-white text-center border-800 p-9 contenedor_frase leading-8 text-lg'>
-		<div class='w-2/4 text-start flex flex-col gap-4'>
+		<div class='w-2/4 text-start flex flex-col gap-4 textos'>
 			<p class='text-4xl'>Diego Garzón</p>
 			<p class='opacity-40'>Web Developer fullstack</p>
 			<p class=''>
@@ -18,19 +18,19 @@ import Chat from '../components/Chat.astro';
 				work together and let our creativity fly, and carry out all our ideas.
 			</p>
 			<p class='text-rose-400'>DEVELOP OUR THOUGHTS AND IDEAS</p>
-			<div class='flex justify-start gap-5'>
-				<a class='w-auto' href='./assets/Cv Diego-Garzon.pdf' download='Cv Diego-Garzon' target='_blank'>
-					<button class='hover:bg-zinc-800 hover:border-white my-8 border py-1 px-5 border-rose-400 cursor-pointer rounded-md'>
+			<div class='flex justify-start gap-5 botones'>
+				<a class='w-auto cv' href='./assets/Cv Diego-Garzon.pdf' download='Cv Diego-Garzon' target='_blank'>
+					<button class='hover:bg-zinc-800 hover:border-white my-8 border py-1 px-5 border-rose-400 cursor-pointer rounded-md cv'>
 						Download CV</button
 					>
 				</a>
-				<a class='w-auto' href='#chat'>
-					<button class='hover:bg-zinc-800 hover:border-white my-8 border py-1 px-5 border-rose-400 cursor-pointer rounded-md'>
+				<a class='w-auto cv' href='#chat'>
+					<button class='hover:bg-zinc-800 hover:border-white my-8 border py-1 px-5 border-rose-400 cursor-pointer rounded-md cv'>
 						Ask me something</button
 					>
 				</a>
-				<a class='w-auto' href='/about'>
-					<button class='hover:bg-zinc-800 hover:border-white my-8 border py-1 px-5 border-rose-400 cursor-pointer rounded-md'>
+				<a class='w-auto cv' href='/about'>
+					<button class='hover:bg-zinc-800 hover:border-white my-8 border py-1 px-5 border-rose-400 cursor-pointer rounded-md cv'>
 						Work Experience</button
 					>
 				</a>
@@ -46,18 +46,29 @@ import Chat from '../components/Chat.astro';
 </Layout>
 <style>
 	@media (max-width: 700px) {
+		.botones {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.cv {
+			margin: 0;
+			width: 100%;
+		}
 		.astronauta,
 		.frases {
 			display: none;
 		}
 		.main_container {
 			display: flex;
+			width: 100%;
 			flex-direction: column;
 			gap: 20px;
 		}
-		.contenedor_frase {
-			width: 90%;
+		.textos {
+			width: 100%;
 		}
+
 		.fotoMia {
 			width: 250px;
 			height: 350px;

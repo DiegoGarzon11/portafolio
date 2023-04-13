@@ -1,22 +1,25 @@
 <header class='w-full h-14 relative'>
 	<div class='text-white flex justify-evenly mb-60 fixed items-center w-full bg-neutral-900 z-10 py-3'>
-		<a href='/'>
+		<a href='/' class='dg'>
 			<h2 class='text-2xl diego'>
 				<span class='mr-1 text-rose-400 font-bold'>D</span> G
 			</h2>
 		</a>
 		<ol class='flex gap-10 text-xl'>
 			<li><a class='descrip relative' href='/'>Home</a></li>
-			<li><a class='descrip relative' href='/blog'>blog</a></li>
+			<li class='dg'><a class='descrip relative dg' href='/blog'>blog</a></li>
 			<li><a class='descrip relative' href='/about'>About</a></li>
 			<li><a class='descrip relative' href='/projects'>Projects</a></li>
-			<li><a class='descrip relative' href='#contacto'>Contacto</a></li>
+			<li class='dg'><a class='descrip relative dg' href='#contacto'>Contacto</a></li>
 		</ol>
 	</div>
 </header>
 
 <style>
 	@media (max-width: 700px) {
+		.dg {
+			display: none;
+		}
 		.second_container {
 			width: 100%;
 		}
