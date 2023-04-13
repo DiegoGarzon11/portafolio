@@ -36,7 +36,7 @@ window.addEventListener('load', () => {
 			mensaje.includes('conocimientos')
 		) {
 			textoChat.innerText = `Sure, the answer to your question: ${inputChat.value} \n \n Some of Diego' skills are javascript, typescript, angular, react, css, tailwind, astro, nodejs, express, jwt, mysql, APIs, c#, git/github, sequelize.
-			Besides that he knows english`;
+			Besides that he knows english and he is learning french`;
 		} else if (mensaje.includes('vive') || mensaje.includes('de donde es ') || mensaje.includes('nacio')) {
 			textoChat.innerText = `Sure, the answer to your question: ${inputChat.value} \n \n  Diego was born and raised in Chia, Colombia, since then he has been living there`;
 		} else if (mensaje.includes('haces') || mensaje.includes('what are you doing?') || mensaje.includes('que haces')) {
